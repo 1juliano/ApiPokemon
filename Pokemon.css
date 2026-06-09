@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    font-family: Arial;
+    color: white;
+}
+
+/* cena */
+.scene {
+    position: relative;
+    text-align: center;
+}
+
+/* POKEBOLA */
+.pokeball {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 20px red;
+    animation: float 2s infinite ease-in-out;
+}
+
+.pokeball .top {
+    width: 100%;
+    height: 50%;
+    background: red;
+    border-radius: 60px 60px 0 0;
+}
+
+.pokeball .bottom {
+    width: 100%;
+    height: 50%;
+    background: white;
+    border-radius: 0 0 60px 60px;
+}
+
+.pokeball .center {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* animação */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* POKEDEX */
+.pokedex {
+    display: none;
+    margin-top: 20px;
+    width: 300px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px red;
+}
+
+.pokedex.show {
+    display: block;
+    animation: open 0.5s ease;
+}
+
+@keyframes open {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.card {
+    margin-top: 10px;
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 120px;
+}
